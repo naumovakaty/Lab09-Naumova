@@ -63,7 +63,7 @@ for (int i = 1; i <= 9; i++)
 {
     for (int j = 1; j <= 9; j++)
     {
-        Console.Write($"{i * j}");
+        Console.Write($"{i * j,3}");
     }
     Console.WriteLine();
 }
@@ -85,3 +85,26 @@ var assigned = Enumerable.Range(1, 10)
 .ToList();
 
 Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+Console.WriteLine("Числа, кратные трём");
+int Num = 20;
+Console.WriteLine($"Числа от 1 до {Num}, кратные трём: ");
+for (int i = 1; i <= Num; i++)
+{
+    if (i % 3 == 0)
+    {
+        Console.WriteLine(i);
+    }
+}
+Console.WriteLine("Пары чисел с заданной суммой");
+for(int i = 1; i <= 5; i++)
+{
+    for(int j = 1; j <= 5; j++)
+    {
+        if( i + j == 6)
+        {
+            Console.WriteLine($"({i}, {j})");
+            break;
+        }
+    }
+}
